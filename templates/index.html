@@ -1,0 +1,22 @@
+{% block head %}
+
+<title>DS Certificate Validator</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center" >DS Certificate Validator</h1>
+
+    <div class="form">
+        <form action="/validator" method="POST">
+            <label for="validation">Enter Your Certificate Number: </label>
+
+
+            <input type="text" name="num1" id="num1">
+            
+            <input type="submit" value="Validate">
+        </form>
+    </div>
+</div>
+{% endblock %}
